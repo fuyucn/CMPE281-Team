@@ -10,15 +10,8 @@ from urllib import urlencode
 client = MongoClient()
 
 app=Flask(__name__)
-#
-# mongo init
-#app.config.update(
-#    MONGO_URI='mongodb://localhost:27017/cmpe281',
-#    MONGO_TEST_URI='mongodb://localhost:27017/test'
-#)
-#mongo = PyMongo(app)
-#client = MongoClient('localhost', 27017)
-client = MongoClient('ec2-52-10-62-253.us-west-2.compute.amazonaws.com', 27009)
+
+client = MongoClient('ec2-52-10-**-***.us-west-2.compute.amazonaws.com', 27009)
 
 db = client.cmpe281
 collection = db.orders
